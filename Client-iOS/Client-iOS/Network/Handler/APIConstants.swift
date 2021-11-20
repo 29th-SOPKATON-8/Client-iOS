@@ -9,4 +9,5 @@ import Foundation
 
 struct APIConstants {
     static let application_json = "application/json"
+    static let baseURL = "https://asia-northeast3-wesopt29-328c5.cloudfunctions.net/api"
 }

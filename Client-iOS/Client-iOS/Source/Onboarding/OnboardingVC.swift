@@ -7,9 +7,13 @@
 
 import UIKit
 
+import Moya
+
 class OnboardingVC: UIViewController {
     
     // MARK: - Properties
+    
+    private let networkMG = UserManager.shared
     
     var maxLength: Int = 17
     
@@ -31,7 +35,7 @@ class OnboardingVC: UIViewController {
     // MARK: - Custom Method
     
     private func configUI() {
-//        tabBarController?.tabBar.isHidden = true
+        tabBarController?.tabBar.isHidden = true
         countLabel.text = "0/18"
         makeButton.cornerRound(radius: 20)
     }
@@ -47,8 +51,15 @@ class OnboardingVC: UIViewController {
     // MARK: - @IBAction
     
     @IBAction func makeButton(_ sender: Any) {
-//        let vc = ToastStepVC()
-//        navigationController?.pushViewController(vc, animated: true)
+
+        guard let toastText = toastTextField.text, !toastText.isEmpty else { return }
+        networkMG.fetchUserName(name: toastText) {
+            print(self.networkMG.userNameModel?.message)
+            
+            // 화면전환!!!!
+            //        let vc = ToastStepVC()
+            //        navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     // MARK: - @objc
@@ -78,6 +89,7 @@ extension OnboardingVC: UITextFieldDelegate {
         if text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || text == toastTextField.placeholder {
             makeButton.isUserInteractionEnabled = false
             makeButton.backgroundColor = UIColor(white: 188.0 / 255.0, alpha: 1.0)
+            makeButton.setShadow(radius: 0, offset: CGSize(width: 0, height: 0), opacity: 0, color: .blue)
             lineView.backgroundColor = UIColor(white: 188.0 / 255.0, alpha: 1.0)
         } else {
             makeButton.isUserInteractionEnabled = true

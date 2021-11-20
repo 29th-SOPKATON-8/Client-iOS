@@ -64,14 +64,10 @@ class CompleteVC: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configUI()
         setupAutoLayout()
     }
     
     // MARK: - Custom Method
-    func configUI() {
-        
-    }
     
     func setupAutoLayout() {
         view.addSubviews([plateImageView, crumbImageView,

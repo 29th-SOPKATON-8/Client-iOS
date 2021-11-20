@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--플레이트-->
+        <!--OnboardingVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="OnboardingVC" id="Y6W-OH-hqX" customClass="OnboardingVC" customModule="Client_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,7 +96,7 @@
                             <constraint firstAttribute="trailing" secondItem="inq-kN-3HL" secondAttribute="trailing" constant="24" id="sxe-4t-j55"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="플레이트" id="h72-JQ-w9u"/>
+                    <tabBarItem key="tabBarItem" title="" image="icon_navigation_plate_unselected" selectedImage="icon_navigation_plate_selected" id="h72-JQ-w9u"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="countLabel" destination="6Qp-b0-eg7" id="dRm-hf-wGn"/>
@@ -111,6 +111,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon_navigation_plate_selected" width="35" height="37"/>
+        <image name="icon_navigation_plate_unselected" width="35" height="37"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
