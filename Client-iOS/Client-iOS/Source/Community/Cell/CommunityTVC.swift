@@ -11,6 +11,8 @@ class CommunityTVC: UITableViewCell {
     
     public static let identifier = "CommunityTVC"
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var bgView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +28,11 @@ class CommunityTVC: UITableViewCell {
     func setUI() {
         bgView.layer.cornerRadius = 20
         bgView.setShadow(radius: 10, offset: CGSize(width: 2, height: 2), opacity: 0.10)
+    }
+    
+    func setData(content: String, name: String) {
+        nameLabel.text = name
+        contentLabel.text = content
     }
 
 }
