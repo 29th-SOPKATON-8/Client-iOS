@@ -17,8 +17,13 @@ class CommunityCVC: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func setData(title: String) {
+    func setData(title: String, selected: Bool) {
         titleLabel.text = title
+        if selected == true {
+            titleLabel.textColor = UIColor(red: 0.25, green: 0.45, blue: 1.0, alpha: 1.0)
+        } else {
+            titleLabel.textColor = .lightGray
+        }
     }
     
 }

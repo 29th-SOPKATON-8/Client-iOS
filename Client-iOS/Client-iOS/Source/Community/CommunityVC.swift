@@ -9,6 +9,10 @@ import UIKit
 
 class CommunityVC: UIViewController {
     
+    var nowPage: Int = 0
+    
+    @IBOutlet weak var indicatorBarConstraint: NSLayoutConstraint!
+    @IBOutlet weak var indicatorBar: UIView!
     @IBOutlet weak var titleCollectionView: UICollectionView!
     @IBOutlet weak var tableview: UITableView!
     override func viewDidLoad() {
@@ -55,7 +59,21 @@ extension CommunityVC: UITableViewDataSource {
 
 // MARK: - CollectionView
 extension CommunityVC: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        /// TODO - [] API 호출 - 테이블 뷰 reload
+        
+        nowPage = indexPath.row
+        
+        // indicator 애니메이션
+        let change = 24 + ((UIScreen.main.bounds.width/4) * CGFloat(self.nowPage))
+        self.indicatorBarConstraint.constant = change - CGFloat(4 * nowPage)
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+        
+        collectionView.reloadData()
+        
+    }
 }
 
 extension CommunityVC: UICollectionViewDataSource {
@@ -66,7 +84,12 @@ extension CommunityVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = titleCollectionView.dequeueReusableCell(withReuseIdentifier: CommunityCVC.identifier, for: indexPath) as? CommunityCVC else { return UICollectionViewCell() }
-        cell.setData(title: "\(indexPath.row + 1)단계")
+        if nowPage == indexPath.row {
+            cell.setData(title: "\(indexPath.row + 1)단계", selected: true)
+        } else {
+            cell.setData(title: "\(indexPath.row + 1)단계", selected: false)
+        }
+        
         return cell
     }
     
