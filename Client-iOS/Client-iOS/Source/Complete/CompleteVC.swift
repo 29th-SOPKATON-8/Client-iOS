@@ -15,13 +15,11 @@ class CompleteVC: UIViewController {
     // MARK: - Properties
         
     private let plateImageView = UIImageView().then {
-//        $0.image = UIImage(named: "plate")
-        $0.backgroundColor = .orange
+        $0.image = UIImage(named: "plate")
     }
     
     private let crumbImageView = UIImageView().then {
-//        $0.image = UIImage(named: "imgCrumb")
-        $0.backgroundColor = .yellow
+        $0.image = UIImage(named: "imgCrumb")
     }
     
     private lazy var labelStackView = UIStackView().then {
@@ -58,22 +56,18 @@ class CompleteVC: UIViewController {
         $0.titleLabel?.font = .boldSystemFont(ofSize: 21)
         $0.setTitleColor(.white, for: .normal)
         $0.backgroundColor = UIColor(red: 65.0 / 255.0, green: 118.0 / 255.0, blue: 1.0, alpha: 1.0)
-//        $0.setShadow(radius: 20, offset: CGSize(width: 4, height: 4), opacity: 0.3, color: UIColor(red: 65.0 / 255.0, green: 118.0 / 255.0, blue: 1.0, alpha: 1.0))
-//        $0.cornerRound(radius: 20)
+        $0.setShadow(radius: 20, offset: CGSize(width: 4, height: 4), opacity: 0.3, color: UIColor(red: 65.0 / 255.0, green: 118.0 / 255.0, blue: 1.0, alpha: 1.0))
+        $0.cornerRound(radius: 20)
         $0.addTarget(self, action: #selector(touchupMakeButton(_:)), for: .touchUpInside)
     }
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configUI()
         setupAutoLayout()
     }
     
     // MARK: - Custom Method
-    func configUI() {
-        
-    }
     
     func setupAutoLayout() {
         view.addSubviews([plateImageView, crumbImageView,
