@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,11 +15,95 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전남친 토스트" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDb-ls-PHT">
+                                <rect key="frame" x="20" y="164" width="173" height="39"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="를" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsy-in-U5V">
+                                <rect key="frame" x="193" y="164" width="28" height="39"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="만들어봐요!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yT3-uX-kaG">
+                                <rect key="frame" x="20" y="203" width="147" height="39"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psi-rq-pfc">
+                                <rect key="frame" x="20" y="385" width="374" height="1"/>
+                                <color key="backgroundColor" red="0.73725490196078436" green="0.73725490196078436" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="CF7-nq-twy"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="토스트 이름 짓기" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="inq-kN-3HL">
+                                <rect key="frame" x="24" y="350.5" width="366" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYq-fW-Ujc">
+                                <rect key="frame" x="86.5" y="636" width="241" height="64"/>
+                                <color key="backgroundColor" red="0.73725490199999999" green="0.73725490199999999" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="I5Q-ua-y2q"/>
+                                    <constraint firstAttribute="height" constant="64" id="Nb3-fc-zZe"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="만들러 가기">
+                                            <attributes>
+                                                <font key="NSFont" size="21" name="AppleSDGothicNeo-Medium"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="makeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Qan-rV-QfK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qp-b0-eg7">
+                                <rect key="frame" x="363" y="396" width="31" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.73725490199999999" green="0.73725490199999999" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="psi-rq-pfc" firstAttribute="top" secondItem="inq-kN-3HL" secondAttribute="bottom" constant="9" id="4Kl-xm-LOO"/>
+                            <constraint firstItem="psi-rq-pfc" firstAttribute="top" secondItem="yT3-uX-kaG" secondAttribute="bottom" constant="143" id="52c-ke-QLi"/>
+                            <constraint firstItem="yT3-uX-kaG" firstAttribute="top" secondItem="SDb-ls-PHT" secondAttribute="bottom" id="6cu-2k-3dT"/>
+                            <constraint firstItem="SDb-ls-PHT" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="164" id="7VU-q6-NBh"/>
+                            <constraint firstItem="DYq-fW-Ujc" firstAttribute="top" secondItem="psi-rq-pfc" secondAttribute="bottom" constant="250" id="93U-qX-D7o"/>
+                            <constraint firstItem="hsy-in-U5V" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="164" id="MHh-tJ-Qoo"/>
+                            <constraint firstItem="psi-rq-pfc" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="20" id="XHO-R8-AfR"/>
+                            <constraint firstItem="6Qp-b0-eg7" firstAttribute="top" secondItem="psi-rq-pfc" secondAttribute="bottom" constant="10" id="exO-nD-Y8u"/>
+                            <constraint firstItem="DYq-fW-Ujc" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fD1-NX-3ez"/>
+                            <constraint firstItem="yT3-uX-kaG" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="20" id="ghB-sa-uH8"/>
+                            <constraint firstAttribute="trailing" secondItem="6Qp-b0-eg7" secondAttribute="trailing" constant="20" id="h5Q-Zh-Qgn"/>
+                            <constraint firstItem="inq-kN-3HL" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="24" id="kjZ-so-cWG"/>
+                            <constraint firstItem="hsy-in-U5V" firstAttribute="leading" secondItem="SDb-ls-PHT" secondAttribute="trailing" id="klj-Af-1NH"/>
+                            <constraint firstItem="SDb-ls-PHT" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="20" id="ko4-cr-zc8"/>
+                            <constraint firstAttribute="trailing" secondItem="psi-rq-pfc" secondAttribute="trailing" constant="20" id="sgT-0G-4aX"/>
+                            <constraint firstAttribute="trailing" secondItem="inq-kN-3HL" secondAttribute="trailing" constant="24" id="sxe-4t-j55"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="플레이트" id="h72-JQ-w9u"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="countLabel" destination="6Qp-b0-eg7" id="dRm-hf-wGn"/>
+                        <outlet property="lineView" destination="psi-rq-pfc" id="2JX-72-kTW"/>
+                        <outlet property="makeButton" destination="DYq-fW-Ujc" id="TBN-m0-59j"/>
+                        <outlet property="toastTextField" destination="inq-kN-3HL" id="6JP-Wo-cxn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
