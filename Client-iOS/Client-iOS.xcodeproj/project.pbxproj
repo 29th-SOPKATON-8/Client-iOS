@@ -29,6 +29,7 @@
 		4FA91F09274920A700975D40 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA91F08274920A700975D40 /* NetworkResult.swift */; };
 		4FA91F0B274920C100975D40 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA91F0A274920C100975D40 /* RequestHandler.swift */; };
 		4FA91F0D274920E800975D40 /* exampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA91F0C274920E800975D40 /* exampleService.swift */; };
+		4FA91F152749948400975D40 /* ToastStepClass+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA91F142749948400975D40 /* ToastStepClass+Layout.swift */; };
 		5BBAFDF127498BA0002A9213 /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBAFDF027498BA0002A9213 /* MainTabBarVC.swift */; };
 		5BCB950BD93C130EB71B79B0 /* Pods_Client_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD402585B2461D94114006A /* Pods_Client_iOS.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		4FA91F08274920A700975D40 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		4FA91F0A274920C100975D40 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		4FA91F0C274920E800975D40 /* exampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exampleService.swift; sourceTree = "<group>"; };
+		4FA91F142749948400975D40 /* ToastStepClass+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToastStepClass+Layout.swift"; sourceTree = "<group>"; };
 		5BBAFDF027498BA0002A9213 /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
 		6426ECA01FE26AB12DB91343 /* Pods-Client-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Client-iOS.release.xcconfig"; path = "Target Support Files/Pods-Client-iOS/Pods-Client-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A774B6B339DEEC8D655419E3 /* Pods-Client-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Client-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Client-iOS/Pods-Client-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				152548852749718B007524B0 /* ToastStepClass.swift */,
+				4FA91F142749948400975D40 /* ToastStepClass+Layout.swift */,
 			);
 			path = ToastStep;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				152548862749718B007524B0 /* ToastStepClass.swift in Sources */,
 				5BBAFDF127498BA0002A9213 /* MainTabBarVC.swift in Sources */,
 				15B7CCF92749030E006D34E9 /* SceneDelegate.swift in Sources */,
+				4FA91F152749948400975D40 /* ToastStepClass+Layout.swift in Sources */,
 				15B7CD2127492C86006D34E9 /* UIView +.swift in Sources */,
 				15B7CD2327492CC6006D34E9 /* UILabel +.swift in Sources */,
 				152548842749713E007524B0 /* CommunityTVC.swift in Sources */,
