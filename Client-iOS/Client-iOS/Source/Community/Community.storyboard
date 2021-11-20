@@ -75,6 +75,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="bgView" destination="GHD-Ca-KJK" id="Eua-QR-RrB"/>
+                                            <outlet property="contentLabel" destination="4fj-hn-z1Z" id="kjY-k6-A2K"/>
+                                            <outlet property="nameLabel" destination="eNZ-ce-vcN" id="aPW-pc-FYm"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
