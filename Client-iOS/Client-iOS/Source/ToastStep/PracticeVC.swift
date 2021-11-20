@@ -16,7 +16,7 @@ class PracticeVC: UIViewController {
     }
     
     @IBAction func ad(_ sender: Any) {
-        let vc = ToastStepClass()
+        let vc = ToastStepClass(idx: 0)
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
