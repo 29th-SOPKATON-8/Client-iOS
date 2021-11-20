@@ -31,7 +31,7 @@ class OnboardingVC: UIViewController {
     // MARK: - Custom Method
     
     private func configUI() {
-        tabBarController?.tabBar.isHidden = true
+//        tabBarController?.tabBar.isHidden = true
         countLabel.text = "0/18"
         makeButton.cornerRound(radius: 20)
     }
