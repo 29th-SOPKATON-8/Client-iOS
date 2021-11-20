@@ -13,7 +13,7 @@ class ToastStepClass: UIViewController {
     
     // MARK: - UIComponenets
     var periodView = UIView().then {
-        $0.backgroundColor = .red
+        $0.backgroundColor = .white
         $0.cornerRound(radius: 10)
     }
     lazy var periodLabel = UILabel().then {
@@ -38,7 +38,7 @@ class ToastStepClass: UIViewController {
     }
     
     var leftBtn = UIButton().then {
-        $0.setTitle("left", for: .normal)
+        //$0.setImage(UIImage(named: <#T##String#>), for: <#T##UIControl.State#>)
         $0.backgroundColor = .red
     }
     
