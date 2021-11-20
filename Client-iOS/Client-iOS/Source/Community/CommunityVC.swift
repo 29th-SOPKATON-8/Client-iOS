@@ -41,6 +41,7 @@ class CommunityVC: UIViewController {
     func setTableView() {
         tableview.delegate = self
         tableview.dataSource = self
+        tableview.backgroundColor = UIColor(red: 251/255, green: 251/255, blue: 251/255, alpha: 1)
     }
     
     func setCollectionView() {
