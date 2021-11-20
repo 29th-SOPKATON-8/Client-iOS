@@ -8,11 +8,13 @@
 import UIKit
 
 class CommunityVC: UIViewController {
-
+    
+    @IBOutlet weak var titleCollectionView: UICollectionView!
     @IBOutlet weak var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
+        setCollectionView()
         // Do any additional setup after loading the view.
     }
     
@@ -21,8 +23,16 @@ class CommunityVC: UIViewController {
         tableview.dataSource = self
     }
     
+    func setCollectionView() {
+        titleCollectionView.delegate = self
+        titleCollectionView.dataSource = self
+    }
+    
+    
 }
 
+
+// MARK: - TableView
 extension CommunityVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -41,4 +51,42 @@ extension CommunityVC: UITableViewDataSource {
     }
     
     
+}
+
+// MARK: - CollectionView
+extension CommunityVC: UICollectionViewDelegate {
+    
+}
+
+extension CommunityVC: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = titleCollectionView.dequeueReusableCell(withReuseIdentifier: CommunityCVC.identifier, for: indexPath) as? CommunityCVC else { return UICollectionViewCell() }
+        cell.setData(title: "\(indexPath.row + 1)단계")
+        return cell
+    }
+    
+    
+}
+
+extension CommunityVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: (UIScreen.main.bounds.width - 20) / 4, height: 58)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
 }
