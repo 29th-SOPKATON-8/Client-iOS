@@ -10,6 +10,7 @@ import UIKit
 class CommunityVC: UIViewController {
     
     var nowPage: Int = 0
+    var serverData: [CommunityContent] = []
     static var isCommunity: Bool = true
     static var week: Int = 1
     
@@ -22,6 +23,7 @@ class CommunityVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        serverConnect()
         setTableView()
         setCollectionView()
         
@@ -36,6 +38,30 @@ class CommunityVC: UIViewController {
             tableviewTopConstraint.constant = 0
             indicatorBar.isHidden = true
         }
+    }
+    
+    func serverConnect() {
+        KimseaService.shared.getCommunityList(step: nowPage + 1) { (response) in
+            switch(response){
+                
+            case .success(let data):
+                guard let data = data as? CommunityResponseModel else { return }
+                self.serverData = data.data!
+                self.tableview.reloadData()
+                print(data)
+            case .requestErr(let message) :
+                print("requestERR", message)
+            case .pathErr :
+                print("pathERR")
+            case .serverErr:
+                print("serverERR")
+            case .networkFail:
+                print("networkFail")
+                
+            }
+            
+        }
+        
     }
     
     func setTableView() {
@@ -61,11 +87,12 @@ extension CommunityVC: UITableViewDelegate {
 
 extension CommunityVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return serverData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CommunityTVC.identifier, for: indexPath) as? CommunityTVC else { return UITableViewCell()}
+        cell.setData(content: serverData[indexPath.row].content, name: serverData[indexPath.row].name)
         return cell
     }
     
@@ -76,6 +103,7 @@ extension CommunityVC: UITableViewDataSource {
 extension CommunityVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         /// TODO - [] API 호출 - 테이블 뷰 reload
+        serverConnect()
         
         nowPage = indexPath.row
         
