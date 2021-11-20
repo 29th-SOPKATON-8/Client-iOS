@@ -15,7 +15,12 @@ class PracticeVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func ad(_ sender: Any) {
+        let vc = ToastStepClass()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
