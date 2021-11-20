@@ -13,6 +13,10 @@
 		15B7CCFE2749030E006D34E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B7CCFC2749030E006D34E9 /* Main.storyboard */; };
 		15B7CD0027490311006D34E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15B7CCFF27490311006D34E9 /* Assets.xcassets */; };
 		15B7CD0327490311006D34E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B7CD0127490311006D34E9 /* LaunchScreen.storyboard */; };
+		15B7CD1D27492C00006D34E9 /* UIStackView +.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7CD1C27492C00006D34E9 /* UIStackView +.swift */; };
+		15B7CD1F27492C0C006D34E9 /* UIViewController +.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7CD1E27492C0C006D34E9 /* UIViewController +.swift */; };
+		15B7CD2127492C86006D34E9 /* UIView +.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7CD2027492C86006D34E9 /* UIView +.swift */; };
+		15B7CD2327492CC6006D34E9 /* UILabel +.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7CD2227492CC6006D34E9 /* UILabel +.swift */; };
 		4FA91F052749206E00975D40 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA91F042749206E00975D40 /* APIConstants.swift */; };
 		4FA91F072749208C00975D40 /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA91F062749208C00975D40 /* NetworkInfo.swift */; };
 		4FA91F09274920A700975D40 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA91F08274920A700975D40 /* NetworkResult.swift */; };
@@ -30,6 +34,10 @@
 		15B7CCFF27490311006D34E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15B7CD0227490311006D34E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15B7CD0427490311006D34E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15B7CD1C27492C00006D34E9 /* UIStackView +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView +.swift"; sourceTree = "<group>"; };
+		15B7CD1E27492C0C006D34E9 /* UIViewController +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController +.swift"; sourceTree = "<group>"; };
+		15B7CD2027492C86006D34E9 /* UIView +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView +.swift"; sourceTree = "<group>"; };
+		15B7CD2227492CC6006D34E9 /* UILabel +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel +.swift"; sourceTree = "<group>"; };
 		4FA91F042749206E00975D40 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		4FA91F062749208C00975D40 /* NetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
 		4FA91F08274920A700975D40 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
@@ -73,6 +81,7 @@
 		15B7CCF52749030E006D34E9 /* Client-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				15B7CD1A27492BD8006D34E9 /* Configuration */,
 				4FA91F002749203800975D40 /* Network */,
 				15B7CCF62749030E006D34E9 /* AppDelegate.swift */,
 				15B7CCF82749030E006D34E9 /* SceneDelegate.swift */,
@@ -83,6 +92,25 @@
 				15B7CD0427490311006D34E9 /* Info.plist */,
 			);
 			path = "Client-iOS";
+			sourceTree = "<group>";
+		};
+		15B7CD1A27492BD8006D34E9 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				15B7CD1B27492BE1006D34E9 /* Extension */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		15B7CD1B27492BE1006D34E9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				15B7CD1C27492C00006D34E9 /* UIStackView +.swift */,
+				15B7CD1E27492C0C006D34E9 /* UIViewController +.swift */,
+				15B7CD2027492C86006D34E9 /* UIView +.swift */,
+				15B7CD2227492CC6006D34E9 /* UILabel +.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		4FA91F002749203800975D40 /* Network */ = {
@@ -253,14 +281,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15B7CD1D27492C00006D34E9 /* UIStackView +.swift in Sources */,
 				4FA91F0B274920C100975D40 /* RequestHandler.swift in Sources */,
 				4FA91F072749208C00975D40 /* NetworkInfo.swift in Sources */,
 				4FA91F052749206E00975D40 /* APIConstants.swift in Sources */,
 				15B7CCFB2749030E006D34E9 /* ViewController.swift in Sources */,
 				4FA91F0D274920E800975D40 /* exampleService.swift in Sources */,
 				4FA91F09274920A700975D40 /* NetworkResult.swift in Sources */,
+				15B7CD1F27492C0C006D34E9 /* UIViewController +.swift in Sources */,
 				15B7CCF72749030E006D34E9 /* AppDelegate.swift in Sources */,
 				15B7CCF92749030E006D34E9 /* SceneDelegate.swift in Sources */,
+				15B7CD2127492C86006D34E9 /* UIView +.swift in Sources */,
+				15B7CD2327492CC6006D34E9 /* UILabel +.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

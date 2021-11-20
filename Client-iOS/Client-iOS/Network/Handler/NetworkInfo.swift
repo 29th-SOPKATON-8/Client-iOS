@@ -15,15 +15,15 @@ enum NetworkHeaderKey: String {
 
 struct NetworkInfo {
     static let shared = NetworkInfo()
-    static let token = UserDefaults.standard.string(forKey: UserDefaults.Keys.token) ?? ""
+//    static let token = UserDefaults.standard.string(forKey: UserDefaults.Keys.token) ?? ""
 
     static var headerOnlyType: HTTPHeaders {
         [NetworkHeaderKey.content_type.rawValue: APIConstants.application_json]
     }
 
-    static var headerWithToken: HTTPHeaders {
-        [NetworkHeaderKey.content_type.rawValue: APIConstants.application_json, NetworkHeaderKey.auth.rawValue: token]
-    }
+//    static var headerWithToken: HTTPHeaders {
+//        [NetworkHeaderKey.content_type.rawValue: APIConstants.application_json, NetworkHeaderKey.auth.rawValue: token]
+//    }
 
     /// 모델에 따라 parameter 만들기
     func makeParameter<T: Codable>(model: T) -> [String: Any]? {

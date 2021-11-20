@@ -8,5 +8,5 @@
 import Foundation
 
 struct APIConstants {
-
+    static let application_json = "application/json"
 }
