@@ -15,7 +15,7 @@ class CompleteVC: UIViewController {
     // MARK: - Properties
         
     private let plateImageView = UIImageView().then {
-        $0.image = UIImage(named: "plate")
+        $0.image = UIImage(named: "step0")
     }
     
     private let crumbImageView = UIImageView().then {
@@ -70,6 +70,7 @@ class CompleteVC: UIViewController {
     // MARK: - Custom Method
     
     func setupAutoLayout() {
+        view.backgroundColor = .white
         view.addSubviews([plateImageView, crumbImageView,
                           labelStackView, makeButton])
         

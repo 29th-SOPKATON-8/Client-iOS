@@ -57,8 +57,9 @@ class OnboardingVC: UIViewController {
             print(self.networkMG.userNameModel?.message)
             
             // 화면전환!!!!
-            //        let vc = ToastStepVC()
-            //        navigationController?.pushViewController(vc, animated: true)
+            self.tabBarController?.tabBar.isHidden = false
+            let vc = ToastStepClass(idx: 0)
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

@@ -143,7 +143,9 @@ class ToastStepClass: UIViewController {
             DispatchQueue.main.async {
                 self.curIdx += 1
                 if(self.curIdx >= 4) {
-                    //
+                    let vc = CompleteVC()
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: true, completion: nil)
                 }
                 else{
                     self.mainLabel.text = self.dataList[self.curIdx].mainStr
@@ -163,4 +165,37 @@ class ToastStepClass: UIViewController {
         }
     }
 
+}
+
+extension ToastStepClass: UITextViewDelegate {
+    
+    /// placeholder 설정
+    func setPlaceHolder(){
+        if !textView.text.isEmpty {
+            textView.delegate = self
+            textView.textColor = .black
+        } else {
+            textView.delegate = self
+            textView.text = "다른 요리사를 위한 팁이나 느낀점을 적어주세요."
+            textView.textColor = .gray01
+        }
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.gray01{
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+        
+        
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "다른 요리사를 위한 팁이나 느낀점을 적어주세요."
+            textView.textColor = UIColor.gray01
+        }
+        
+        
+    }
 }

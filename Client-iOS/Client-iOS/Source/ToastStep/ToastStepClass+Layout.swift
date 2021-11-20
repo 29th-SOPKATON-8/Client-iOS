@@ -46,7 +46,7 @@ extension ToastStepClass {
         textImgView.snp.makeConstraints { make in
             make.width.equalTo(298 * screenWidthRatio)
             make.height.equalTo(132 * screenHeightRatio)
-            make.centerX.equalToSuperview()
+            make.centerX.equalToSuperview().offset(10)
             make.top.equalTo(subLabel.snp.bottom).offset(276 * screenHeightRatio)
 
         }
