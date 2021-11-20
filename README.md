@@ -11,9 +11,8 @@
 | [@heerucan](https://github.com/heerucan) | [@jins0704](https://github.com/jins0704) | [@kimseawater](https://github.com/hyesuuou) |
 | :---: | :---: | :---: |
 |<img width="170" alt="스크린샷 2021-06-19 오후 9 23 57" src="https://user-images.githubusercontent.com/63235947/142727626-0272d99c-b107-4564-8707-1f6f9e764d6e.png">| <img width="207" src="https://user-images.githubusercontent.com/63235947/142727674-586262eb-a406-414d-91bd-7462d6885908.png"> |<img width="170" src="https://user-images.githubusercontent.com/63235947/142727730-a040deca-3f39-405e-9888-438f2b7db7d7.png">|
-|`---View`|`---View`|`---View`|
-|-|-|-|
-|-|-|-|
+|`온보딩, 이름입력뷰`|`단계뷰`|`커뮤니티뷰`|
+
 	
 
 <br>
@@ -441,40 +440,40 @@ import URLNavigator`
 <summary> 💬 💬 💬 </summary>
 <div markdown="1">
 
-
+<br>
 
 ```
    🗂 Client-iOS
     	 │
-		   │
-		   |── 📂 Configuration
+	 │
+	 |── 📂 Configuration
     	 │        │
-		   │        |── 📁 Base
-		   │        |── 📁 Constant
-		   │        |── 📁 Extension
-		   │        └── 📁 Protocol
-		   │
-		   │── 📂 Network
-		   │        |── 📁 Model
-		   │        |── 📁 Service
-		   │        └── 📁 Handler
-       │    
-       │
-		   │── 📂 Source
-		   │        |── 📁 View1
-		   │        |── 📁 View2
-		   │        └── 📁 View3
-		   │                  │
-		   │                  └── 📁 Cell
-       │
-		   │
-		   |
-		   |── AppDelegate.swift 
-		   |── SceneDelegate.swift     
-       |
-       |── LaunchScreen.storyboard
-       |── Assets.xcassets
-       └── Info.plist           
+	 │        |── 📁 Base
+	 │        |── 📁 Constant
+	 │        |── 📁 Extension
+	 │        └── 📁 Protocol
+    	 │
+	 │── 📂 Network
+	 │        |── 📁 Model
+	 │        |── 📁 Service
+	 │        └── 📁 Handler
+         │    
+         │
+	 │── 📂 Source
+	 │        |── 📁 View1
+	 │        |── 📁 View2
+	 │        └── 📁 View3
+	 │                  │
+	 │                  └── 📁 Cell
+         │
+         │
+   	 |
+	 |── AppDelegate.swift 
+	 |── SceneDelegate.swift     
+         |
+         |── LaunchScreen.storyboard
+         |── Assets.xcassets
+         └── Info.plist           
 
 		
 ```
