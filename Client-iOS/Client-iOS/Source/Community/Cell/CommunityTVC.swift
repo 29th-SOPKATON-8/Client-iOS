@@ -25,7 +25,7 @@ class CommunityTVC: UITableViewCell {
     
     func setUI() {
         bgView.layer.cornerRadius = 20
-        bgView.setShadow(radius: 2, offset: CGSize(width: 0, height: 2), opacity: 0.25)
+        bgView.setShadow(radius: 10, offset: CGSize(width: 2, height: 2), opacity: 0.10)
     }
 
 }

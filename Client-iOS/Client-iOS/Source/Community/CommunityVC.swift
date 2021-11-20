@@ -10,29 +10,44 @@ import UIKit
 class CommunityVC: UIViewController {
     
     var nowPage: Int = 0
+    static var isCommunity: Bool = true
+    static var week: Int = 1
     
+    @IBOutlet weak var navigationTitleLabel: UILabel!
+    @IBOutlet weak var tableviewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var indicatorBarConstraint: NSLayoutConstraint!
     @IBOutlet weak var indicatorBar: UIView!
     @IBOutlet weak var titleCollectionView: UICollectionView!
     @IBOutlet weak var tableview: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
         setCollectionView()
-        // Do any additional setup after loading the view.
+        
+        if CommunityVC.isCommunity == true {
+            navigationTitleLabel.text = "커뮤니티"
+            titleCollectionView.isHidden = false
+            tableviewTopConstraint.constant = 58
+            indicatorBar.isHidden = false
+        } else {
+            navigationTitleLabel.text = "\(CommunityVC.week)주차"
+            titleCollectionView.isHidden = true
+            tableviewTopConstraint.constant = 0
+            indicatorBar.isHidden = true
+        }
     }
     
     func setTableView() {
         tableview.delegate = self
         tableview.dataSource = self
+        tableview.backgroundColor = UIColor(red: 251/255, green: 251/255, blue: 251/255, alpha: 1)
     }
     
     func setCollectionView() {
         titleCollectionView.delegate = self
         titleCollectionView.dataSource = self
     }
-    
-    
 }
 
 
