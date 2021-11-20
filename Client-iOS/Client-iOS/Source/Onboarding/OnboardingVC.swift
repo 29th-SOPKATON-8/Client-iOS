@@ -47,7 +47,8 @@ class OnboardingVC: UIViewController {
     // MARK: - @IBAction
     
     @IBAction func makeButton(_ sender: Any) {
-        
+//        let vc = ToastStepVC()
+//        navigationController?.pushViewController(vc, animated: true)
     }
     
     // MARK: - @objc
