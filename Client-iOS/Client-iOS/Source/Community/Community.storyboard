@@ -159,12 +159,12 @@
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OZ6-EA-ysB" secondAttribute="trailing" id="0Wc-tq-lC1"/>
                             <constraint firstItem="cPc-65-pKZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="1PE-dQ-ZUy"/>
+                            <constraint firstItem="RQy-u5-5FC" firstAttribute="top" secondItem="OZ6-EA-ysB" secondAttribute="bottom" constant="58" id="1wD-hS-AW3"/>
                             <constraint firstAttribute="trailing" secondItem="RQy-u5-5FC" secondAttribute="trailing" id="RbG-af-rvb"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cPc-65-pKZ" secondAttribute="trailing" id="WxV-cs-xQK"/>
                             <constraint firstItem="cPc-65-pKZ" firstAttribute="top" secondItem="OZ6-EA-ysB" secondAttribute="bottom" id="aQM-qT-fgv"/>
                             <constraint firstItem="OZ6-EA-ysB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="fKy-aS-9I9"/>
                             <constraint firstItem="vKG-ht-4KC" firstAttribute="top" secondItem="cPc-65-pKZ" secondAttribute="bottom" constant="-25" id="fq7-gi-G0E"/>
-                            <constraint firstItem="RQy-u5-5FC" firstAttribute="top" secondItem="cPc-65-pKZ" secondAttribute="bottom" id="gUW-jw-3rg"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="RQy-u5-5FC" secondAttribute="bottom" id="u1T-2Q-deX"/>
                             <constraint firstItem="RQy-u5-5FC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vB5-LC-eRo"/>
                             <constraint firstItem="vKG-ht-4KC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="xVe-yr-gP6"/>
@@ -176,7 +176,9 @@
                     <connections>
                         <outlet property="indicatorBar" destination="vKG-ht-4KC" id="fgD-25-uoW"/>
                         <outlet property="indicatorBarConstraint" destination="xVe-yr-gP6" id="rPz-ao-5LM"/>
+                        <outlet property="navigationTitleLabel" destination="IFe-Vv-J4X" id="f1x-bF-SPM"/>
                         <outlet property="tableview" destination="RQy-u5-5FC" id="WMo-d9-bka"/>
+                        <outlet property="tableviewTopConstraint" destination="1wD-hS-AW3" id="hBG-Bw-Ld4"/>
                         <outlet property="titleCollectionView" destination="cPc-65-pKZ" id="MOp-MK-k39"/>
                     </connections>
                 </viewController>
