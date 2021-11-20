@@ -30,6 +30,8 @@
 		4FA91F0B274920C100975D40 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA91F0A274920C100975D40 /* RequestHandler.swift */; };
 		4FA91F0D274920E800975D40 /* exampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA91F0C274920E800975D40 /* exampleService.swift */; };
 		4FA91F152749948400975D40 /* ToastStepClass+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA91F142749948400975D40 /* ToastStepClass+Layout.swift */; };
+		4FA91F1B274997DC00975D40 /* Practice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FA91F1A274997DC00975D40 /* Practice.storyboard */; };
+		4FA91F1D2749980400975D40 /* PracticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA91F1C2749980400975D40 /* PracticeVC.swift */; };
 		5BBAFDF127498BA0002A9213 /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBAFDF027498BA0002A9213 /* MainTabBarVC.swift */; };
 		5BBAFDF4274996BE002A9213 /* CompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBAFDF3274996BE002A9213 /* CompleteVC.swift */; };
 		5BCB950BD93C130EB71B79B0 /* Pods_Client_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD402585B2461D94114006A /* Pods_Client_iOS.framework */; };
@@ -61,6 +63,8 @@
 		4FA91F0A274920C100975D40 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		4FA91F0C274920E800975D40 /* exampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exampleService.swift; sourceTree = "<group>"; };
 		4FA91F142749948400975D40 /* ToastStepClass+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToastStepClass+Layout.swift"; sourceTree = "<group>"; };
+		4FA91F1A274997DC00975D40 /* Practice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Practice.storyboard; sourceTree = "<group>"; };
+		4FA91F1C2749980400975D40 /* PracticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeVC.swift; sourceTree = "<group>"; };
 		5BBAFDF027498BA0002A9213 /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
 		5BBAFDF3274996BE002A9213 /* CompleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteVC.swift; sourceTree = "<group>"; };
 		6426ECA01FE26AB12DB91343 /* Pods-Client-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Client-iOS.release.xcconfig"; path = "Target Support Files/Pods-Client-iOS/Pods-Client-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 			children = (
 				152548852749718B007524B0 /* ToastStepClass.swift */,
 				4FA91F142749948400975D40 /* ToastStepClass+Layout.swift */,
+				4FA91F1A274997DC00975D40 /* Practice.storyboard */,
+				4FA91F1C2749980400975D40 /* PracticeVC.swift */,
 			);
 			path = ToastStep;
 			sourceTree = "<group>";
@@ -307,6 +313,7 @@
 				15B7CD0327490311006D34E9 /* LaunchScreen.storyboard in Resources */,
 				15B7CD0027490311006D34E9 /* Assets.xcassets in Resources */,
 				15B7CCFE2749030E006D34E9 /* Main.storyboard in Resources */,
+				4FA91F1B274997DC00975D40 /* Practice.storyboard in Resources */,
 				1525487F2749706D007524B0 /* Community.storyboard in Resources */,
 				1525487B27497030007524B0 /* Onboarding.storyboard in Resources */,
 			);
@@ -371,6 +378,7 @@
 				4FA91F09274920A700975D40 /* NetworkResult.swift in Sources */,
 				15B7CD1F27492C0C006D34E9 /* UIViewController +.swift in Sources */,
 				1525488127497079007524B0 /* CommunityVC.swift in Sources */,
+				4FA91F1D2749980400975D40 /* PracticeVC.swift in Sources */,
 				15B7CCF72749030E006D34E9 /* AppDelegate.swift in Sources */,
 				1525488B274973FB007524B0 /* exampleModel.swift in Sources */,
 				152548862749718B007524B0 /* ToastStepClass.swift in Sources */,
