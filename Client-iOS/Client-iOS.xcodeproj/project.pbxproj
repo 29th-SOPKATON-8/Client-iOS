@@ -13,6 +13,11 @@
 		15B7CCFE2749030E006D34E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B7CCFC2749030E006D34E9 /* Main.storyboard */; };
 		15B7CD0027490311006D34E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15B7CCFF27490311006D34E9 /* Assets.xcassets */; };
 		15B7CD0327490311006D34E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B7CD0127490311006D34E9 /* LaunchScreen.storyboard */; };
+		4FA91F052749206E00975D40 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA91F042749206E00975D40 /* APIConstants.swift */; };
+		4FA91F072749208C00975D40 /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA91F062749208C00975D40 /* NetworkInfo.swift */; };
+		4FA91F09274920A700975D40 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA91F08274920A700975D40 /* NetworkResult.swift */; };
+		4FA91F0B274920C100975D40 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA91F0A274920C100975D40 /* RequestHandler.swift */; };
+		4FA91F0D274920E800975D40 /* exampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA91F0C274920E800975D40 /* exampleService.swift */; };
 		5BCB950BD93C130EB71B79B0 /* Pods_Client_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD402585B2461D94114006A /* Pods_Client_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +30,11 @@
 		15B7CCFF27490311006D34E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15B7CD0227490311006D34E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15B7CD0427490311006D34E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FA91F042749206E00975D40 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		4FA91F062749208C00975D40 /* NetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
+		4FA91F08274920A700975D40 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		4FA91F0A274920C100975D40 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		4FA91F0C274920E800975D40 /* exampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exampleService.swift; sourceTree = "<group>"; };
 		6426ECA01FE26AB12DB91343 /* Pods-Client-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Client-iOS.release.xcconfig"; path = "Target Support Files/Pods-Client-iOS/Pods-Client-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A774B6B339DEEC8D655419E3 /* Pods-Client-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Client-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Client-iOS/Pods-Client-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		BDD402585B2461D94114006A /* Pods_Client_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Client_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +73,7 @@
 		15B7CCF52749030E006D34E9 /* Client-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				4FA91F002749203800975D40 /* Network */,
 				15B7CCF62749030E006D34E9 /* AppDelegate.swift */,
 				15B7CCF82749030E006D34E9 /* SceneDelegate.swift */,
 				15B7CCFA2749030E006D34E9 /* ViewController.swift */,
@@ -74,13 +85,48 @@
 			path = "Client-iOS";
 			sourceTree = "<group>";
 		};
+		4FA91F002749203800975D40 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4FA91F032749205400975D40 /* Model */,
+				4FA91F022749204700975D40 /* Service */,
+				4FA91F012749204000975D40 /* Handler */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4FA91F012749204000975D40 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				4FA91F042749206E00975D40 /* APIConstants.swift */,
+				4FA91F062749208C00975D40 /* NetworkInfo.swift */,
+				4FA91F08274920A700975D40 /* NetworkResult.swift */,
+				4FA91F0A274920C100975D40 /* RequestHandler.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		4FA91F022749204700975D40 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4FA91F0C274920E800975D40 /* exampleService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4FA91F032749205400975D40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		903495D5B2009FB0C6887F4F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				A774B6B339DEEC8D655419E3 /* Pods-Client-iOS.debug.xcconfig */,
 				6426ECA01FE26AB12DB91343 /* Pods-Client-iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,7 +253,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FA91F0B274920C100975D40 /* RequestHandler.swift in Sources */,
+				4FA91F072749208C00975D40 /* NetworkInfo.swift in Sources */,
+				4FA91F052749206E00975D40 /* APIConstants.swift in Sources */,
 				15B7CCFB2749030E006D34E9 /* ViewController.swift in Sources */,
+				4FA91F0D274920E800975D40 /* exampleService.swift in Sources */,
+				4FA91F09274920A700975D40 /* NetworkResult.swift in Sources */,
 				15B7CCF72749030E006D34E9 /* AppDelegate.swift in Sources */,
 				15B7CCF92749030E006D34E9 /* SceneDelegate.swift in Sources */,
 			);
