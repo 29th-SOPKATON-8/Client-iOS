@@ -18,21 +18,23 @@ class ToastStepClass: UIViewController {
     }
     lazy var periodLabel = UILabel().then {
         $0.text = "만들기 1일차"
-        $0.font = UIFont(name: "AppleSDGothicNeo", size: 18)
+        $0.tintColor = UIColor.gray01
+        $0.font = .systemFont(ofSize: 18, weight: .regular)
     }
     
     var mainLabel = UILabel().then {
         $0.text = "Main Label"
-        $0.font = UIFont(name: "AppleSDGothicNeo", size: 24)
+        $0.font = .systemFont(ofSize: 24, weight: .medium)
+        $0.tintColor = UIColor.blue
     }
     
     var subLabel = UILabel().then {
         $0.text = "Sub Label"
-        $0.font = UIFont(name: "AppleSDGothicNeo", size: 20)
+        $0.font = .systemFont(ofSize: 20, weight: .regular)
     }
     
     var dishImg = UIImageView().then() {
-        $0.backgroundColor = .blue
+        $0.image = UIImage(named: "step1")
     }
     
     var leftBtn = UIButton().then {
@@ -50,10 +52,15 @@ class ToastStepClass: UIViewController {
         $0.spacing = 10
         $0.axis = .horizontal
     }
+     
+    var textImgView = UIImageView().then {
+        $0.image = UIImage(named: "Group")
+    }
     
-//    var textView = UITextView().then {
-//    }
-//
+    var textView = UITextView().then {
+        $0.backgroundColor = .clear
+    }
+
     init() {
         super.init(nibName: nil, bundle: nil)
         setToastStepData()
@@ -68,13 +75,15 @@ class ToastStepClass: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+//        textView.delegate = self
+//
         setConstraints()
         setView()
     }
     
     func setView(){
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(white: 251.0 / 255.0, alpha: 1.0)
         btnStackView.addArrangedSubviews([leftBtn,rightBtn])
     }
     
