@@ -42,25 +42,24 @@ extension ToastStepClass {
             make.height.equalTo(500 * screenHeightRatio)
             make.width.equalToSuperview()
         }
-
-        btnStackView.snp.makeConstraints { make in
-            make.width.equalToSuperview().inset(50)
-            make.centerX.equalToSuperview()
-            make.height.equalTo(50)
-            make.bottom.equalToSuperview().inset(30)
-        }
         
         textImgView.snp.makeConstraints { make in
             make.width.equalTo(298 * screenWidthRatio)
             make.height.equalTo(132 * screenHeightRatio)
-            make.centerX.equalToSuperview()
-            make.bottom.equalTo(btnStackView.snp.top).offset(-27 * screenHeightRatio)
+            make.centerX.equalToSuperview().offset(10)
+            make.top.equalTo(subLabel.snp.bottom).offset(276 * screenHeightRatio)
 
         }
         textView.snp.makeConstraints { make in
             make.center.equalTo(textImgView)
             make.width.equalTo(textImgView.snp.width).inset(30)
             make.height.equalTo(textImgView.snp.height).inset(20)
+        }
+        
+        btnStackView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.height.equalTo(50 * screenHeightRatio)
+            make.top.equalTo(textImgView.snp.bottom).offset(40 * screenHeightRatio)
         }
     }
 }
