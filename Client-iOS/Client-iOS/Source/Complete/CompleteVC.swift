@@ -114,5 +114,11 @@ class CompleteVC: UIViewController {
     
     @objc func touchupMakeButton(_ sender: UIButton) {
         print("새로만들기 버튼 클릭")
+                let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+                guard let nextVC = storyboard.instantiateViewController(identifier: "OnboardingVC")
+                        as? OnboardingVC else { return }
+                let navController = UINavigationController(rootViewController: nextVC)
+                navController.modalPresentationStyle = .fullScreen
+                present(navController, animated: true, completion: nil)
     }
 }
