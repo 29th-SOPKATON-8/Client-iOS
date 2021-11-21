@@ -56,6 +56,14 @@ extension ToastStepClass {
             make.height.equalTo(textImgView.snp.height).inset(20)
         }
         
+        rightBtn.snp.makeConstraints { make in
+            make.width.equalTo(137 * screenWidthRatio)
+        }
+        
+        leftBtn.snp.makeConstraints { make in
+            make.width.equalTo(137 * screenWidthRatio)
+        }
+        
         btnStackView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.height.equalTo(50 * screenHeightRatio)
